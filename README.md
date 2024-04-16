@@ -18,7 +18,8 @@ Half adder is a combinational circuit that performs simple addition of two binar
 
 Sum = A’B+AB’ =A ⊕ B Carry = AB
 
-![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
+![image](https://github.com/GOWTHAM54577/HALF_ADDER_SUBTRACTOR/assets/144589420/c5154d8d-53b7-4301-9cae-efd77330e3aa)
+
 
 Figure -01 HALF ADDER
 
@@ -29,11 +30,19 @@ The half-subtractor is a combinational circuit which is used to perform subtract
 Diff = A’B+AB’ =A ⊕ B
 Borrow = A’B
 
- ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
+ ![image](https://github.com/GOWTHAM54577/HALF_ADDER_SUBTRACTOR/assets/144589420/1b2acbf4-b964-4409-9bef-399c114fd2d5)
+
 
 Figure -02 HALF Subtractor
 
 **Truthtable**
+Figure - 01 : Half adder
+![image](https://github.com/Renusri-Naraharasetty/HALF_ADDER_SUBTRACTOR/assets/146916363/dc24f4df-8167-474f-830c-4eb545f4da3b)
+
+Figure - 02 : Half subtractor
+![image](https://github.com/GOWTHAM54577/HALF_ADDER_SUBTRACTOR/assets/144589420/dcd2e2e5-7581-41d1-bb1d-0bd52bc9cc2c)
+
+
 
 **Procedure**
 
@@ -52,10 +61,41 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by: RENUSRI NARAHARASHETTY
+
+RegisterNumber: 212223240139
+*/
+HALF ADDER:
+```
+module half_adder(a,b,sum,carry);
+input a,b;
+output sum,carry; 
+assign sum = a^b;
+assign carry = a & b;
+endmodule
+```
+
+HALF SUBTRACTOR:
+```
+module halfsub_top(a,b,D,Bo);
+input a,b;
+output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+  assign Bo = ~a & b;
+endmodule
+```
 
 **RTL Schematic**
 
 **Output/TIMING Waveform**
+# HALF ADDER:
+![image](https://github.com/GOWTHAM54577/HALF_ADDER_SUBTRACTOR/assets/144589420/953a357f-965a-45e5-9dec-f2fb89670d2b)
+
+
+# HALF SUBTRACTOR:
+![image](https://github.com/GOWTHAM54577/HALF_ADDER_SUBTRACTOR/assets/144589420/c32279bd-2062-470d-9b4d-94564f261933)
+
+
 
 **Result:**
+Therefore the code has been run successfully and the output has been verified.
